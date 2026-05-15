@@ -42,12 +42,12 @@ export default async function ProductPage({ params }: Props) {
       <Nav />
 
       {/* DETALLE DEL PRODUCTO */}
-      <section className="pt-28 section-gap max-w-screen-xl mx-auto px-5 md:px-10">
+      <section className="pt-20 md:pt-28 section-gap max-w-screen-xl mx-auto px-5 md:px-10">
         <div className="grid md:grid-cols-2 gap-10 md:gap-20 items-start">
 
-          {/* Imagen */}
-          <div className="sticky top-24">
-            <div className="relative bg-surface-dim rounded h-[520px] flex items-center justify-center overflow-hidden">
+          {/* Imagen — sticky en móvil y escritorio */}
+          <div className="sticky top-20 md:top-24 z-10">
+            <div className="relative bg-surface-dim rounded h-[46vh] md:h-[520px] flex items-center justify-center overflow-hidden">
               {product.status !== "Current Harvest" && (
                 <span className="absolute top-5 left-5 text-[10px] font-body font-semibold tracking-widest uppercase text-tertiary border border-tertiary/40 px-2 py-0.5 rounded-[2px]">
                   {statusLabel[product.status] ?? product.status}
