@@ -3,6 +3,16 @@ import Link from "next/link";
 import Chip from "./Chip";
 import type { Product } from "@/lib/products";
 
+const statusLabel: Record<string, string> = {
+  "Current Harvest": "Cosecha Actual",
+  "Limited Release": "Edición Limitada",
+  "Signature": "Signature",
+};
+
+function formatPrice(cents: number): string {
+  return (cents / 100).toFixed(2).replace(".", ",");
+}
+
 interface ProductCardProps {
   product: Product;
   className?: string;
@@ -18,7 +28,7 @@ export default function ProductCard({ product, className = "" }: ProductCardProp
       <div className="relative bg-surface-dim flex items-center justify-center pt-8 pb-4 px-6 h-64 overflow-hidden">
         {product.status !== "Current Harvest" && (
           <span className="absolute top-4 right-4 text-[9px] font-body font-semibold tracking-widest uppercase text-tertiary border border-tertiary/40 px-2 py-0.5 rounded-[2px]">
-            {product.status}
+            {statusLabel[product.status] ?? product.status}
           </span>
         )}
         <Image
@@ -48,7 +58,7 @@ export default function ProductCard({ product, className = "" }: ProductCardProp
         <div className="flex items-center justify-between border-t border-outline/40 pt-3">
           <span className="font-body text-on-surface-variant text-sm">300g · Specialty</span>
           <span className="font-body font-semibold text-cream text-sm">
-            €{(product.price / 100).toFixed(2)}
+            €{formatPrice(product.price)}
           </span>
         </div>
       </div>

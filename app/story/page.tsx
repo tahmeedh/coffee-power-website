@@ -165,25 +165,6 @@ export default function StoryPage() {
         />
       </section>
 
-      {/* HORARIO */}
-      <section className="section-gap max-w-screen-xl mx-auto px-5 md:px-10">
-        <div className="max-w-lg mx-auto bg-surface-container border border-outline rounded p-10 text-center">
-          <p className="label-caps text-muted mb-4">Encuéntranos</p>
-          <h2 className="font-display text-cream text-4xl mb-8">Visítanos</h2>
-          <div className="space-y-6">
-            <div>
-              <p className="label-caps text-muted mb-2">Lunes — Viernes</p>
-              <p className="font-body text-cream text-xl">10:00 – 14:00</p>
-              <p className="font-body text-cream text-xl">17:30 – 20:30</p>
-            </div>
-            <div className="border-t border-outline pt-6">
-              <p className="label-caps text-muted mb-2">Sábado</p>
-              <p className="font-body text-cream text-xl">10:00 – 14:00</p>
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* GUARDIANES DEL SABOR */}
       <section className="section-gap max-w-screen-xl mx-auto px-5 md:px-10">
         <div className="text-center mb-14">

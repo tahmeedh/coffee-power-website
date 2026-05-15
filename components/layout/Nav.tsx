@@ -7,8 +7,8 @@ const navLinks = [
   { label: "Tienda", href: "/shop" },
   { label: "Nuestra Historia", href: "/story" },
   { label: "Herencia", href: "/heritage" },
-  { label: "Blog", href: "/journal" },
   { label: "Suscripción", href: "/subscribe" },
+  { label: "Blog", href: "/journal" },
 ];
 
 export default function Nav() {
